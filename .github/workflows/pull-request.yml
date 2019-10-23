@@ -1,0 +1,13 @@
+name: Pull request
+
+on: [pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - run: docker-compose run graphql rails test
+
