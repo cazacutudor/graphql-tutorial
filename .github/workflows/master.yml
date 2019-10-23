@@ -1,0 +1,12 @@
+name: Master
+on:
+  push:
+    branch:
+      - master
+jobs:
+  run-specs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run - rails test
+        run: docker-compose run graphql rails test

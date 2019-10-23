@@ -1,0 +1,9 @@
+name: Pull request
+on: [pull_request]
+jobs:
+  run-specs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Run - rails test
+        run: docker-compose run graphql rails test
