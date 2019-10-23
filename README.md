@@ -1,5 +1,5 @@
 # GraphQL - tutorial
-
-![](https://github.com/cazacutudor/graphql-tutorial/workflows/Run%20Specs/badge.svg)
+![Master Status](https://github.com/cazacutudor/graphql-tutorial/workflows/master/badge.svg)
+___
 
 https://howtographql.com
