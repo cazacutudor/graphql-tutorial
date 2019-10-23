@@ -14,6 +14,11 @@ class Resolvers::LinksSearch
   end
 
   option :filter, type: LinkFilter, with: :apply_filter
+  option :first, type: types.Int, with: :apply_first
+
+  def apply_first(scope, value)
+    scope.limit(value)
+  end
 
   def apply_filter(scope, value)
     branches = normalize_filters(value).reduce { |a, b| a.or(b) }
